@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
+    <link rel="stylesheet" href="estilo.css">
+
+  <title>Frontend Mentor | Weather app</title>
+
+
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <div class="total">
+    <div class="cabecera">
+      <div class="titulo">
+        <img src="images/logo.svg" alt="">
+      </div>
+
+    </div>
+
+
+    <div class="titulo">
+      <h2>How`s the sky looking today</h2>
+    </div>
+    <div class="buscador">
+      <input type="text" name="" id="ciudad" placeholder="Search for a place...">
+      <button class="boton" onclick="aceptar()">Search</button>
+    </div>
+
+    <div class="informacion">
+      <div class="infoizquierda">
+        <div class="tiempo">
+          <div class="tiempoIzq">
+            <p class="tiempoIzqP"></p>
+            <p class="tiempoIzqPHora"></p>
+          </div>
+          <div class="tiempoDerecha">
+            <img src="#" alt="" class="fotoTiempo">
+            <p class="tiempoDerechaGrados"></p>
+          </div>
+        </div>
+
+
+
+        <div class="vientoTemperaturaEtc">
+          <div class="temperatura todoJunto">
+            <p>Feels Like</p>
+            <p class="FeelsGrados todoJuntoGrados"></p>
+          </div>
+          <div class="humedad todoJunto">
+            <p>Humidity</p>
+            <p class="FeelsHumedad todoJuntoGrados"></p>
+
+          </div>
+          <div class="viento todoJunto">
+            <p>Wind</p>
+            <p class="FeelsViento todoJuntoGrados"></p>
+          </div>
+          <div class="precipitaciones todoJunto">
+            <p>Precipitation</p>
+            <p class="Feelslluvia todoJuntoGrados"></p>
+          </div>
+        </div>
+        <div class="tituloMedio">
+          <h3>Daly Forecast</h3>
+        </div>
+        <div class="timpoesemana">
+          <div class=" todoJuntoDias">
+            <p class="lunes"></p>
+            <img src="" alt="" class="lunesImagen">
+            <div class="temMaxMin">
+              <p class="lunesTemperaturaMax"></p>
+              <p class="lunesTemperaturaMin"></p>
+            </div>
+          </div>
+
+          <div class="todoJuntoDias">
+            <p class="martes"></p>
+            <img src="" alt="" class="martesImagen">
+            <div class="temMaxMin">
+              <p class="martesTemperaturaMax"></p>
+              <p class="martesTemperaturaMin"></p>
+            </div>
+          </div>
+
+          <div class="todoJuntoDias">
+            <p class="miercoles"></p>
+            <img src="" alt="" class="miercolesImagen">
+            <div class="temMaxMin">
+              <p class="miercolesTemperaturaMax"></p>
+              <p class="miercolesTemperaturaMin"></p>
+            </div>
+          </div>
+
+          <div class="todoJuntoDias">
+            <p class="jueves"></p>
+            <img src="" alt="" class="juevesImagen">
+            <div class="temMaxMin">
+              <p class="juevesTemperaturaMax"></p>
+              <p class="juevesTemperaturaMin"></p>
+            </div>
+          </div>
+
+          <div class="todoJuntoDias">
+            <p class="viernes"></p>
+            <img src="" alt="" class="viernesImagen">
+            <div class="temMaxMin">
+              <p class="viernesTemperaturaMax"></p>
+              <p class="viernesTemperaturaMin"></p>
+            </div>
+          </div>
+
+          <div class="todoJuntoDias">
+            <p class="sabado"></p>
+            <img src="" alt="" class="sabadoImagen">
+            <div class="temMaxMin">
+              <p class="sabadoTemperaturaMax"></p>
+              <p class="sabadoTemperaturaMin"></p>
+            </div>
+          </div>
+
+          <div class="todoJuntoDias">
+            <p class="domingo"></p>
+            <img src="" alt="" class="domingoImagen">
+            <div class="temMaxMin">
+              <p class="domingoTemperaturaMax"></p>
+              <p class="domingoTemperaturaMin"></p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="infoDerecha">
+        <div class="tiempoHoras">
+          <div class="horasDia">
+            <p>Hourly forecast</p>
+            <select name="diasEleccion" id="diasEleccion" onchange="horaSemanal()">
+              <option value="0">Monday</option>
+              <option value="1">Tuesday</option>
+              <option value="2">Wednsday</option>
+              <option value="3">Thursday</option>
+              <option value="4">Friday</option>
+              <option value="5">Saturday</option>
+              <option value="6">Sunday</option>
+            </select>
+          </div>
+        </div>
+        <div class="metoHoras">
+          <div class="horasTotal">
+            <img src="#" alt="" class="horas1img horasImg">
+            <p class="horas1izq"></p>
+          </div>
+          <div class="">
+            <p class="horas1der"></p>
+          </div>
+        </div>
+        <div class="metoHoras">
+          <div class="horasTotal">
+            <img src="#" alt="" class="horas2img horasImg">
+            <p class="horas2izq"></p>
+          </div>
+          <div class="">
+            <p class="horas2der"></p>
+          </div>
+        </div>
+        <div class="metoHoras">
+          <div class="horasTotal">
+            <img src="#" alt="" class="horas3img horasImg">
+            <p class="horas3izq"></p>
+          </div>
+          <div class="">
+            <p class="horas3der"></p>
+          </div>
+        </div>
+        <div class="metoHoras">
+          <div class="horasTotal">
+            <img src="#" alt="" class="horas4img horasImg">
+            <p class="horas4izq"></p>
+          </div>
+          <div class="">
+            <p class="horas4der"></p>
+          </div>
+        </div>
+        <div class="metoHoras">
+          <div class="horasTotal">
+            <img src="#" alt="" class="horas5img horasImg">
+            <p class="horas5izq"></p>
+          </div>
+          <div class="">
+            <p class="horas5der"></p>
+          </div>
+        </div>
+        <div class="metoHoras">
+          <div class="horasTotal">
+            <img src="#" alt="" class="horas6img horasImg">
+            <p class="horas6izq"></p>
+          </div>
+          <div class="">
+            <p class="horas6der"></p>
+          </div>
+        </div>
+        <div class="metoHoras">
+          <div class="horasTotal">
+            <img src="#" alt="" class="horas7img horasImg">
+            <p class="horas7izq"></p>
+          </div>
+          <div class="">
+            <p class="horas7der"></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+    Coded by <a href="#">Yuri Murugarren</a>.
+  </div>
+</body>
+
+
+<script src="codigo.js"></script>
